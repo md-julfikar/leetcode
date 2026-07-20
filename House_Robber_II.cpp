@@ -10,7 +10,7 @@ int solve(vector<int>& nums, int i, int end, vector<int> &memo){
     return memo[i]=max(rob,skip);
 }
 int rob(vector<int>& nums) {
-    // if(nums.size()==1) return nums[0];
+    if(nums.size()==1) return nums[0];
     vector<int> memo1(nums.size()+1,-1);
     vector<int> memo2(nums.size()+1,-1); 
     return max(solve(nums,0,nums.size()-2,memo1),solve(nums,1,nums.size()-1,memo2));
